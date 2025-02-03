@@ -1,13 +1,13 @@
 class Rule:
-    def __init__(self, condition: dict, conclusion: str) -> None:
-        self.condition = condition
+    def __init__(self, fact: dict, conclusion: str) -> None:
+        self.fact = fact
         self.conclusion = conclusion
 
     def getRule(self) -> str:
-        rule = "if "
-        for x, y in self.condition.items():
+        rule = "If "
+        for x, y in self.fact.items():
             rule += x + " -> " + str(y) + ", "
 
-        rule += "then " + self.conclusion
+        rule += "Then " + self.conclusion
 
         return rule
